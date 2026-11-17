@@ -9,7 +9,7 @@ Rules: one milestone per chat. Work on branch `v2`, never on `main` until M06. N
 |---|---|---|---|
 | M01 | Freeze 1.0 and set up | done | none |
 | M02 | Safety and git | done | M01 |
-| M03 | Decision log and memory | not_started | M01 |
+| M03 | Decision log and memory | in_progress | M01 |
 | M04 | Fix the flow | not_started | M02, M03 |
 | M05 | Validator and example | not_started | M04 |
 | M06 | Public release | not_started | M05 |
@@ -37,12 +37,13 @@ Note: pushed to `v2` (c94ca27) with Linh's approval on 2026-11-17. M03 starts in
 
 ## M03: Decision log and memory
 Tasks:
-- [ ] Change `decisions.jsonl` format to `{ts, by, via, topic, decision, reason}` (ISO time with timezone)
-- [ ] Ship `decisions.jsonl` empty (no placeholder entry)
-- [ ] Make `state.json` allow "no plan" (null milestone)
-- [ ] Add memory-size rule: summarise old entries after about 50
-- [ ] Ask the person's name once in intake; store in `context/project.md`
+- [x] Change `decisions.jsonl` format to `{ts, by, via, topic, decision, reason}` (ISO time with timezone)
+- [x] Ship `decisions.jsonl` empty (no placeholder entry)
+- [x] Make `state.json` allow "no plan" (null milestone)
+- [x] Add memory-size rule: summarise old entries after about 50
+- [x] Ask the person's name once in intake; store in `context/project.md`
 Done when: a logged decision shows name, date and time; templates contain no fake entries.
+Note: work committed locally on 2026-11-17, waiting for Linh's review before push and before marking done. `memory/summaries/` is referenced but its template and index line come in M05.
 
 ## M04: Fix the flow
 Tasks:

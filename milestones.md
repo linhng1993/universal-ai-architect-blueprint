@@ -20,6 +20,7 @@ to each milestone file, and `mastery` (not_started / learning / practiced / mast
 ## Status values (roadmap.json and state.json)
 not_started -> in_progress -> blocked | review -> done   (curriculum may add: skipped)
 Only ONE milestone is in_progress at a time.
+No plan (single-task project): `state.json` has `"active_milestone": null` and `"milestone_status": null`.
 
 ## Session protocol
 START of every chat:

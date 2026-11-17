@@ -4,7 +4,9 @@
 Use the AskUserQuestion tool. Limits: max 4 questions per call, 2-4 options each.
 "Other" (free text) is added automatically, so never add it as an option.
 Run 2 rounds. Skip any question the user already answered. If the tool is unavailable, ask the same questions in plain text with lettered options (A/B/C/D + "or write your own").
-First, ask the project's one-sentence goal in plain chat (free text) before Round 1.
+First, in plain chat (free text) before Round 1, ask:
+- the person's name, once (skip if `.ai/context/project.md` already has an Owner). It goes into `context/project.md` as Owner and is the `by` value in `decisions.jsonl`.
+- the project's one-sentence goal.
 
 ## Round 1: shape of the project
 1. header "Type" | "What kind of project is this?" | single-select
@@ -54,7 +56,7 @@ Sensitive data -> add a "never read / never send" rule to AGENTS.md.
 9. header "Plan" | "How should the work be structured?" | single-select
    - Milestones (project phases with deliverables)
    - Curriculum (learning modules with exercises)
-   - Single task, no plan needed
+   - Single task, no plan needed (no `plan/` folder; `state.json` keeps `active_milestone: null`)
 10. header "Pace" | "How big should each milestone be?" | single-select
    - Small (one short chat)
    - Medium (one focused chat, recommended)

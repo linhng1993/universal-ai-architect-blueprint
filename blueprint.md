@@ -24,9 +24,9 @@ project/
 │   │   └── glossary.json      [JSON {term: definition}]
 │   │                          AI: looked up by key, never read whole
 │   ├── memory/                (what changes over time)
-│   │   ├── state.json         [JSON] current task, status, next step
+│   │   ├── state.json         [JSON] current task, status, next step (milestone null = no plan)
 │   │   │                      AI: resumes work without re-explaining
-│   │   ├── decisions.jsonl    [JSON Lines, append-only] decision, reason, date
+│   │   ├── decisions.jsonl    [JSON Lines, append-only, ships empty] ts, by, via, topic, decision, reason
 │   │   │                      AI: greps by topic
 │   │   ├── learned.md         [markdown bullets] mistakes and fixes
 │   │   │                      AI: reads to avoid repeating errors
@@ -64,6 +64,14 @@ project/
     ├── raw/                   [csv/pdf/etc.] untouched originals; AI never reads directly
     └── processed/             [parquet/jsonl] compact versions; AI queries with code
 ```
+
+## Memory rules
+Templates ship with no example entries; the AI writes only real ones.
+- `decisions.jsonl`, one line per decision (time read from the clock, with timezone):
+  `{"ts":"2026-11-17T22:05+01:00","by":"Alex","via":"claude-code","topic":"git","decision":"Tag milestones M0X-done","reason":"Easy to find in history"}`
+- `by` is the Owner from `context/project.md` (asked once at intake) unless someone else decided.
+- Size: past about 50 entries in `decisions.jsonl` or `learned.md`, ask, then summarise the old
+  entries into `memory/summaries/`, archive the full file (`safety.md`), keep the newest ~10, log it.
 
 ## Tailoring rule
 Keep the entry file, index, safety.md, context/, memory/ and .gitignore in every project.

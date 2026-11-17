@@ -1,7 +1,7 @@
 {
-  "updated": "{date}",
-  "active_milestone": "M01",
-  "milestone_status": "in_progress",
+  "updated": "{iso_time}",
+  "active_milestone": null,
+  "milestone_status": null,
   "current_task": "{task}",
   "next_step": "{next}",
   "blockers": [],
