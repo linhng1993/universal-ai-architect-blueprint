@@ -7,8 +7,8 @@ Rules: one milestone per chat. Work on branch `v2`, never on `main` until M06. N
 ## Status
 | ID | Title | Status | Depends on |
 |---|---|---|---|
-| M01 | Freeze 1.0 and set up | review | none |
-| M02 | Safety and git | not_started | M01 |
+| M01 | Freeze 1.0 and set up | done | none |
+| M02 | Safety and git | review | M01 |
 | M03 | Decision log and memory | not_started | M01 |
 | M04 | Fix the flow | not_started | M02, M03 |
 | M05 | Validator and example | not_started | M04 |
@@ -23,16 +23,17 @@ Tasks:
 - [x] Add `VERSION` (2.0.0)
 - [x] Add `CHANGELOG.md` listing planned changes
 Done when: `v1.0` tag exists, `v2` branch exists, changelog lists planned changes.
-Note: done locally; becomes `done` once Linh approves the push of `v2` and `v1.0`.
+Note: Linh marked M01 done on 2026-11-17. `v2` is on GitHub; the `v1.0` tag (a600756) is recreated locally and goes up with the next approved push.
 
 ## M02: Safety and git
 Tasks:
-- [ ] Write `safety.md`: never delete; move to `.ai/archive/YYYY-MM-DD/`; get approval first; log it
-- [ ] Add git steps to the README flow: init, first commit, commit and tag at milestone end
-- [ ] Add a template `.gitignore` for new projects
-- [ ] Remove "safe to delete" wording from `blueprint.md`
-- [ ] Reference `safety.md` from the `AGENTS.md` template
+- [x] Write `safety.md`: never delete; move to `.ai/archive/YYYY-MM-DD/`; get approval first; log it
+- [x] Add git steps to the README flow: init, first commit, commit and tag at milestone end
+- [x] Add a template `.gitignore` for new projects
+- [x] Remove "safe to delete" wording from `blueprint.md`
+- [x] Reference `safety.md` from the `AGENTS.md` template
 Done when: every delete path in the kit ends in archive or git, and a new project starts as a git repo.
+Note: done locally on 2026-11-17; becomes `done` once Linh reviews it and approves the push. M03 starts in a new chat.
 
 ## M03: Decision log and memory
 Tasks:

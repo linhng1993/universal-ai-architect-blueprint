@@ -12,6 +12,8 @@ project/
 │   ├── index.md               [markdown, ~50 lines]
 │   │     For: map of "what lives where", one line each
 │   │     AI: decides which single file to open next
+│   ├── safety.md              [markdown, <40 lines] never delete: archive, ask, log
+│   │     AI: follows it before removing, moving or overwriting anything
 │   ├── context/               (stable knowledge, rarely changes)
 │   │   ├── project.md         [markdown] goal, users, scope, non-goals
 │   │   │                      AI: loaded once for the "why"
@@ -47,12 +49,15 @@ project/
 │   │                          AI: returns strict JSON, no rambling or retries
 │   ├── tools/registry.json    [JSON] tool name, one-line purpose, parameters
 │   │                          AI: picks the right tool without trial and error
-│   ├── cache/                 (generated, safe to delete)
+│   ├── cache/                 (generated, rebuild in place; clearing follows safety.md)
 │   │   ├── embeddings/        [vector DB / .npy] semantic search; top 3-5 chunks
 │   │   ├── file-summaries.json [JSON {path: 2-line summary}] skim before opening
 │   │   └── results/           [JSON/parquet] reuse costly computations
-│   └── logs/runs.jsonl        [JSON Lines] what was done, cost, outcome
-│                              AI: rarely read; used to audit token cost
+│   ├── logs/runs.jsonl        [JSON Lines] what was done, cost, outcome
+│   │                          AI: rarely read; used to audit token cost
+│   └── archive/YYYY-MM-DD/    [any] files moved away instead of deleted (kept in git)
+│                              AI: never reads, except to restore a file
+├── .gitignore                 [text] secrets, OS files, .ai/cache/ (from templates/gitignore)
 ├── docs/                      [markdown] human docs; AI searches on demand
 ├── src/                       [code] the work product; AI opens by path, partial reads
 └── data/
@@ -61,5 +66,6 @@ project/
 ```
 
 ## Tailoring rule
-Keep the entry file, index, context/ and memory/ in every project.
+Keep the entry file, index, safety.md, context/, memory/ and .gitignore in every project.
+Every project is a git repo from the first session (see README).
 Everything else is optional: add it only when the project has a real need.

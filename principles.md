@@ -14,7 +14,7 @@
 1. AGENTS.md and index.md stay under ~100 lines each (paid on every call).
 2. One topic per file, descriptive file name (AI can choose from the name alone).
 3. Conclusion first in every file, so the AI can stop reading early.
-4. Summarize and archive old sessions regularly.
+4. Summarize and archive old sessions regularly. Archive means move to `.ai/archive/YYYY-MM-DD/`, never delete (`safety.md`).
 5. Anything generated goes in cache/ (rebuildable, no maintenance).
 6. Never preload docs/, data/ or src/. Reach them through the index.
 7. One milestone per chat. Finished milestone -> write handoff.md -> suggest a new chat. Long chats cost more and drift.

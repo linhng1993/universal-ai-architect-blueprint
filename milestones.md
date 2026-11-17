@@ -33,7 +33,8 @@ END of milestone (all done_when criteria met, or user says done):
 1. Set milestone status = done in roadmap.json; set the next milestone to in_progress (or not_started if user wants a break).
 2. Append key decisions to memory/decisions.jsonl; new lessons to memory/learned.md.
 3. Rewrite plan/handoff.md using templates/ai/plan/handoff.md (what's done, what's next, files touched, open questions, first action for next chat).
-4. TELL THE USER to start a new chat:
+4. Commit everything and tag it: `git tag -a M0X-done -m "M0X: <title>"`. Ask before pushing.
+5. TELL THE USER to start a new chat:
    "Milestone M0X is complete and the handoff is saved. I suggest starting a new chat for M0Y to keep context small and cheap. Paste this as your first message: 'Continue the project. Read AGENTS.md and .ai/plan/handoff.md, then start M0Y.'"
 
 ## When to suggest a new chat (also mid-milestone)

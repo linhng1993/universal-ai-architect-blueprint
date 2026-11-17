@@ -41,6 +41,14 @@ Format: [Keep a Changelog](https://keepachangelog.com/). Versions: [SemVer](http
 - `VERSION` file (2.0.0) so projects built from the kit can record which version they used.
 - `CHANGELOG.md` (this file).
 - `plan/v2-milestones.md` and `plan/decisions.jsonl`: plan and decision log for building 2.0.
+- `safety.md` (M02): never delete; archive to `.ai/archive/YYYY-MM-DD/`, ask first, log it; risky git commands need approval. Copied into each project as `.ai/safety.md`.
+- `templates/gitignore` (M02): secrets, OS files and `.ai/cache/`; copied into each project as `.gitignore`.
+- Git section in `README.md` (M02): `git init` and a baseline commit before writing files, first commit after, commit and tag `M0X-done` at each milestone end.
+
+### Changed
+- `blueprint.md`: `cache/` is no longer "safe to delete"; tree adds `safety.md`, `archive/` and `.gitignore`.
+- `templates/AGENTS.md` and `templates/ai/index.md` point to `safety.md`; milestone end now commits and tags.
+- `milestones.md` end-of-milestone steps and `principles.md` rule 4 use archive and git instead of deletion.
 
 ## [1.0.0] - 2026-11-17 (tag `v1.0`)
 - Original kit: `README.md`, `intake.md`, `variants.md`, `blueprint.md`, `milestones.md`,

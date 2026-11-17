@@ -1,6 +1,7 @@
 # Index
 | Path | What it is | Open when |
 |---|---|---|
+| safety.md | never delete: archive, ask, log | before removing, moving or overwriting anything |
 | context/project.md | goal, users, scope | first session / unclear scope |
 | context/architecture.md | components, data flow | design or structural tasks |
 | context/conventions.md | style and naming rules | before writing |
@@ -13,3 +14,4 @@
 | plan/handoff.md | summary from the previous chat | start of every chat |
 | plan/roadmap.json | all milestones and status | planning, choosing next work |
 | plan/milestones/ | one file per milestone | only the active milestone |
+| archive/ | files moved away instead of deleted | only to restore a file |
