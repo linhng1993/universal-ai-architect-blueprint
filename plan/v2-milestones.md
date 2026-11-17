@@ -9,7 +9,7 @@ Rules: one milestone per chat. Work on branch `v2`, never on `main` until M06. N
 |---|---|---|---|
 | M01 | Freeze 1.0 and set up | done | none |
 | M02 | Safety and git | done | M01 |
-| M03 | Decision log and memory | in_progress | M01 |
+| M03 | Decision log and memory | done | M01 |
 | M04 | Fix the flow | not_started | M02, M03 |
 | M05 | Validator and example | not_started | M04 |
 | M06 | Public release | not_started | M05 |
@@ -43,7 +43,7 @@ Tasks:
 - [x] Add memory-size rule: summarise old entries after about 50
 - [x] Ask the person's name once in intake; store in `context/project.md`
 Done when: a logged decision shows name, date and time; templates contain no fake entries.
-Note: work committed locally on 2026-11-17, waiting for Linh's review before push and before marking done. `memory/summaries/` is referenced but its template and index line come in M05.
+Note: Linh approved M03 and its push to `v2` on 2026-11-17. M04 starts in a new chat. `memory/summaries/` is referenced but its template and index line come in M05.
 
 ## M04: Fix the flow
 Tasks:
