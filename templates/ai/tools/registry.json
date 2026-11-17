@@ -1,0 +1,5 @@
+{
+  "tools": [
+    {"name": "{tool}", "purpose": "{one line}", "params": {"{param}": "{type}"}}
+  ]
+}

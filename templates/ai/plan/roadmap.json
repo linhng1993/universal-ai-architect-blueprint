@@ -1,0 +1,10 @@
+{
+  "project": "{project_name}",
+  "type": "milestones",
+  "updated": "{date}",
+  "active": "M01",
+  "milestones": [
+    {"id": "M01", "title": "{title}", "status": "in_progress", "depends_on": [], "goal": "{one line}", "done_when": ["{verifiable criterion}"], "file": "milestones/M01-{slug}.md"},
+    {"id": "M02", "title": "{title}", "status": "not_started", "depends_on": ["M01"], "goal": "{one line}", "done_when": ["{criterion}"], "file": "milestones/M02-{slug}.md"}
+  ]
+}

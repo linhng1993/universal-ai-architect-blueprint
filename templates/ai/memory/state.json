@@ -1,0 +1,9 @@
+{
+  "updated": "{date}",
+  "active_milestone": "M01",
+  "milestone_status": "in_progress",
+  "current_task": "{task}",
+  "next_step": "{next}",
+  "blockers": [],
+  "suggest_new_chat": false
+}
