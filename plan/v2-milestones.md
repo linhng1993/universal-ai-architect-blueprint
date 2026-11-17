@@ -8,7 +8,7 @@ Rules: one milestone per chat. Work on branch `v2`, never on `main` until M06. N
 | ID | Title | Status | Depends on |
 |---|---|---|---|
 | M01 | Freeze 1.0 and set up | done | none |
-| M02 | Safety and git | review | M01 |
+| M02 | Safety and git | done | M01 |
 | M03 | Decision log and memory | not_started | M01 |
 | M04 | Fix the flow | not_started | M02, M03 |
 | M05 | Validator and example | not_started | M04 |
@@ -23,7 +23,7 @@ Tasks:
 - [x] Add `VERSION` (2.0.0)
 - [x] Add `CHANGELOG.md` listing planned changes
 Done when: `v1.0` tag exists, `v2` branch exists, changelog lists planned changes.
-Note: Linh marked M01 done on 2026-11-17. `v2` is on GitHub; the `v1.0` tag (a600756) is recreated locally and goes up with the next approved push.
+Note: Linh marked M01 done on 2026-11-17. `v2` is on GitHub. The `v1.0` tag (a600756) is not on GitHub yet: the cloud session's push was refused (HTTP 403), so Linh pushes it from her own machine.
 
 ## M02: Safety and git
 Tasks:
@@ -33,7 +33,7 @@ Tasks:
 - [x] Remove "safe to delete" wording from `blueprint.md`
 - [x] Reference `safety.md` from the `AGENTS.md` template
 Done when: every delete path in the kit ends in archive or git, and a new project starts as a git repo.
-Note: done locally on 2026-11-17; becomes `done` once Linh reviews it and approves the push. M03 starts in a new chat.
+Note: pushed to `v2` (c94ca27) with Linh's approval on 2026-11-17. M03 starts in a new chat.
 
 ## M03: Decision log and memory
 Tasks:
