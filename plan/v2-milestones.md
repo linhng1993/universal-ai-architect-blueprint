@@ -23,7 +23,7 @@ Tasks:
 - [x] Add `VERSION` (2.0.0)
 - [x] Add `CHANGELOG.md` listing planned changes
 Done when: `v1.0` tag exists, `v2` branch exists, changelog lists planned changes.
-Note: Linh marked M01 done on 2026-11-17. `v2` is on GitHub. The `v1.0` tag (a600756) is not on GitHub yet: the cloud session's push was refused (HTTP 403), so Linh pushes it from her own machine.
+Note: Linh marked M01 done on 2026-11-17. `v2` is on GitHub. The `v1.0` tag (annotated, on a600756) was refused from the cloud session (HTTP 403); Linh pushed it from her own machine. Verified on GitHub on 2026-11-17.
 
 ## M02: Safety and git
 Tasks:
